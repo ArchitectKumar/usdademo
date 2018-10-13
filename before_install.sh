@@ -9,6 +9,6 @@ sudo apt-get install -y \
     python3-pip
 
 if [ -d /home/ubuntu/gtac-demo ]; then
-  sudo rm -R /home/ubuntu/gtac-demo
+  sudo rm -rf /home/ubuntu/gtac-demo
   mkdir /home/ubuntu/gtac-demo
 fi

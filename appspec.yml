@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/gtac-demo
+permissions:
+  - object: /home/ubuntu/gtac-demo
+    owner: ec2user
+    group: ec2user
+hooks:
+  BeforeInstall:
+    - location: before_install.sh
+      runas: ec2user
+  AfterInstall:
+    - location: after_install.sh
+      runas: ec2user

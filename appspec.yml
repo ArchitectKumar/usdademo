@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /var/www/gtac-demo
 hooks:
-  AfterInstall:
+  BeforeInstall:
     - location: before_install.sh
       timeout: 300
       runas: ec2-user

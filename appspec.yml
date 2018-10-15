@@ -9,7 +9,7 @@ os: linux
 #    destination: /etc/httpd/conf.d
 files:
   - source: /
-    destination: /var/www/gtac-demo/index.html
+    destination: /var/www/gtac-demo
 hooks:
    AfterInstall:
     - location: install_dependencies

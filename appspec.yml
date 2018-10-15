@@ -3,6 +3,8 @@ os: linux
 files:
   - source: /
     destination: /var/www/gtac-demo
+    source: /var/www/gtac-demo/index.html
+    destination: /var/www/html
 hooks:
   BeforeInstall:
     - location: before_install.sh

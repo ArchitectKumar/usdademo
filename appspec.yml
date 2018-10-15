@@ -1,16 +1,25 @@
 version: 0.0
 os: linux
+#files:
+#  - source: /app.wsgi
+#    destination: /var/www/gtac-demo
+#  - source: /
+#    destination: /home/ec2-user/gtac-demo
+#  - source: /conf/sample_app.conf
+#    destination: /etc/httpd/conf.d
 files:
   - source: /
-    destination: /home/ubuntu/gtac-demo
-permissions:
-  - object: /home/ubuntu/gtac-demo
-    owner: ec2-user
-    group: ec2-user
+    destination: /var/www/gtac-demo/index.html
 hooks:
-  BeforeInstall:
-    - location: before_install.sh
-      runas: ec2-user
-  AfterInstall:
-    - location: after_install.sh
-      runas: ec2-user
+   AfterInstall:
+    - location: install_dependencies
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: start_server
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: stop_server
+      timeout: 300
+      runas: root

@@ -1,2 +1,2 @@
 yum install -y httpd
-easy_install pip
+yum install -y pip

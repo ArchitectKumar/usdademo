@@ -1,12 +1,5 @@
 version: 0.0
 os: linux
-#files:
-#  - source: /app.wsgi
-#    destination: /var/www/gtac-demo
-#  - source: /
-#    destination: /home/ec2-user/gtac-demo
-#  - source: /conf/sample_app.conf
-#    destination: /etc/httpd/conf.d
 files:
   - source: /
     destination: /var/www/gtac-demo

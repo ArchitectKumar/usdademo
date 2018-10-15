@@ -5,18 +5,18 @@ files:
     destination: /var/www/gtac-demo
 hooks:
   AfterInstall:
-    - location: before_install
+    - location: before_install.sh
       timeout: 300
       runas: ec2-user
    AfterInstall:
-    - location: after_install
+    - location: after_install.sh
       timeout: 300
       runas: ec2-user
   ApplicationStart:
-    - location: start_server
+    - location: start_server.sh
       timeout: 300
       runas: ec2-user
   ApplicationStop:
-    - location: stop_server
+    - location: stop_server.sh
       timeout: 300
       runas: ec2-user
